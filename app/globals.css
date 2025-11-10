@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+  @apply bg-[#0f0f11] text-white antialiased;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.05), transparent),
+              linear-gradient(to bottom, #0f0f11, #0a0a0c);
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* adjust to your header height */
+}
