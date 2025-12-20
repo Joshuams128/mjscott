@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   const titles = ["Frontend Developer", "UX/UI Designer", "Web Designer"];
@@ -96,6 +97,24 @@ export default function Hero() {
           className="px-6 py-3 bg-white/10 border border-white/20 rounded-xl text-white backdrop-blur-md hover:bg-white/20 transition-all text-sm sm:text-base"
         >
           View My Work ↓
+        </a>
+      </motion.div>
+
+      {/* LinkedIn Icon */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.7, duration: 0.6 }}
+        className="mt-6"
+      >
+        <a
+          href="https://linkedin.com/in/mjoshscott"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center w-12 h-12 bg-teal-400/20 border border-teal-300/40 rounded-full text-teal-300 hover:bg-teal-400/30 hover:scale-110 transition-all backdrop-blur-md"
+          aria-label="LinkedIn Profile"
+        >
+          <FaLinkedin size={24} />
         </a>
       </motion.div>
     </section>
