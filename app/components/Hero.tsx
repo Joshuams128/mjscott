@@ -68,7 +68,7 @@ export default function Hero() {
         className="mt-4 text-base sm:text-lg text-white/70 max-w-2xl"
       >
         I build sleek, interactive web experiences using{" "}
-        <span className="text-white">WordPress, Shopify, and Squarespace</span>{" "}
+        <span className="text-white">WordPress, Shopify, and Webflow</span>{" "}
         and modern frameworks like{" "}
         <span className="text-white">React & Next.js</span>.
       </motion.p>
