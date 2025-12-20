@@ -85,6 +85,16 @@ const allProjects: Project[] = [
   },
   {
     id: 8,
+    title: "Susan Brown",
+    desc: "Workshops That Build Confidence",
+    extra: "WordPress, JS, CSS",
+    link: "https://susanbrown.com/",
+    image: "/images/susanbrown.png",
+    thumbnail: "/images/susanbrown.png",
+    category: "Web",
+  },
+  {
+    id: 9,
     title: "Mad Movies",
     desc: "Imitation site for Marvel movies.",
     extra: "PHP, HTML, CSS, SQL",

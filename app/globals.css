@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #171717;
     --foreground: #ededed;
   }
 }
@@ -26,9 +26,9 @@ body {
 }
 
 body {
-  @apply bg-[#0f0f11] text-white antialiased;
+  @apply bg-[#171717] text-white antialiased;
   background: radial-gradient(circle at top, rgba(255,255,255,0.05), transparent),
-              linear-gradient(to bottom, #0f0f11, #0a0a0c);
+              linear-gradient(to bottom, #171717, #171717);
 }
 html {
   scroll-behavior: smooth;
