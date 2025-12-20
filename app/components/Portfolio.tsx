@@ -113,6 +113,17 @@ const allProjects: Project[] = [
     category: "Experimental",
     preview: "Marvel movie database with custom SQL backend and user reviews."
   },
+  {
+    id: 10,
+    title: "Neon Maze",
+    desc: "Interactive maze game with enemies.",
+    extra: "JavaScript, Canvas, Game Development",
+    link: "https://neonmaze.mjscott.ca/",
+    image: "/images/neon.png",
+    thumbnail: "/images/neon.png",
+    category: "Experimental",
+    preview: "Neon-themed maze game with arrow key controls, enemies, and collectible targets."
+  },
   
 ];
 

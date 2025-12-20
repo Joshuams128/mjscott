@@ -207,6 +207,37 @@ const projectDetails: Record<number, ProjectDetail> = {
     ],
     timeline: "3 months",
     role: "Full Stack Developer"
+  },
+  10: {
+    id: 10,
+    title: "Neon Maze",
+    desc: "Interactive maze game with enemies",
+    fullDescription: "Neon Maze is an interactive browser-based game where players navigate through a glowing neon maze while avoiding enemies. Built with vanilla JavaScript and HTML5 Canvas, it features smooth animations, collision detection, and engaging gameplay mechanics.",
+    link: "https://neonmaze.mjscott.ca/",
+    image: "/images/neon.png",
+    category: "Experimental",
+    tech: ["JavaScript", "HTML5 Canvas", "CSS", "Game Physics"],
+    features: [
+      "Arrow key controls for smooth character movement",
+      "Dynamic enemy AI with pathfinding",
+      "Collectible targets and scoring system",
+      "Neon visual effects and animations",
+      "Collision detection system",
+      "Responsive canvas rendering"
+    ],
+    challenges: [
+      "Implementing efficient collision detection",
+      "Creating smooth enemy movement and AI behavior",
+      "Optimizing canvas rendering for performance",
+      "Designing balanced game difficulty"
+    ],
+    outcomes: [
+      "Successfully created engaging gameplay loop",
+      "Achieved 60 FPS smooth animations",
+      "Gained experience in game development concepts"
+    ],
+    timeline: "2 months",
+    role: "Game Developer"
   }
 };
 

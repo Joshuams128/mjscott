@@ -61,17 +61,16 @@ export default function Hero() {
 </motion.h2>
 
 
-      {/* Description */}
+    {/* Description */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.6 }}
         className="mt-4 text-base sm:text-lg text-white/70 max-w-2xl"
       >
-        I build sleek, interactive web experiences using{" "}
-        <span className="text-white">WordPress, Shopify, and Webflow</span>{" "}
-        and modern frameworks like{" "}
-        <span className="text-white">React & Next.js</span>.
+        I build sleek, interactive web experiences using modern frameworks like{" "}
+        <span className="text-white">React & Next.js</span>, alongside platforms like{" "}
+        <span className="text-white">WordPress, Shopify, and Webflow</span>.
       </motion.p>
 
 
