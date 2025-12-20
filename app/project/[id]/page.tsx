@@ -238,6 +238,37 @@ const projectDetails: Record<number, ProjectDetail> = {
     ],
     timeline: "2 months",
     role: "Game Developer"
+  },
+  11: {
+    id: 11,
+    title: "Panda Express",
+    desc: "Interactive panda game with GSAP animations",
+    fullDescription: "Panda Express is an interactive browser-based game featuring a cute panda character with various emotional states. Designed from scratch and built with GSAP (GreenSock Animation Platform) for smooth, professional animations. The game includes a control panel to trigger different panda states and interactions.",
+    link: "https://pandagame.mjscott.ca/",
+    image: "/images/panda.png",
+    category: "Experimental",
+    tech: ["JavaScript", "GSAP", "HTML5", "CSS", "Animation"],
+    features: [
+      "Custom-designed panda character and environment",
+      "GSAP-powered smooth animations",
+      "Interactive control panel with multiple states (Feed, Happy, Sad, Angry, Sick, Dead)",
+      "Bamboo-themed visual design",
+      "Responsive character reactions",
+      "Seamless state transitions"
+    ],
+    challenges: [
+      "Designing appealing character animations from scratch",
+      "Implementing smooth GSAP animation sequences",
+      "Creating intuitive state management system",
+      "Balancing animation timing for natural movement"
+    ],
+    outcomes: [
+      "Successfully created engaging interactive character",
+      "Mastered GSAP animation library",
+      "Developed unique game concept with personality"
+    ],
+    timeline: "3 months",
+    role: "Game Designer & Developer"
   }
 };
 

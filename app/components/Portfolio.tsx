@@ -124,6 +124,17 @@ const allProjects: Project[] = [
     category: "Experimental",
     preview: "Neon-themed maze game with arrow key controls, enemies, and collectible targets."
   },
+  {
+    id: 11,
+    title: "Panda Express",
+    desc: "Interactive panda game with GSAP animations.",
+    extra: "JavaScript, GSAP, Game Development",
+    link: "https://pandagame.mjscott.ca/",
+    image: "/images/panda.png",
+    thumbnail: "/images/panda.png",
+    category: "Experimental",
+    preview: "A panda game designed from scratch with smooth GSAP animations and interactive controls."
+  },
   
 ];
 
