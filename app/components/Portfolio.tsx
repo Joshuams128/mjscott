@@ -88,7 +88,7 @@ const allProjects: Project[] = [
     title: "Susan Brown",
     desc: "Workshops That Build Confidence",
     extra: "WordPress, JS, CSS",
-    link: "https://susanbrown.com/",
+    link: "https://susanmbrown.com/",
     image: "/images/susanbrown.png",
     thumbnail: "/images/susanbrown.png",
     category: "Web",
