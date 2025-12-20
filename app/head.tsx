@@ -22,7 +22,7 @@ export default function Head() {
       <meta name="twitter:image" content={heroImage} />
 
       {/* Optional: Favicon */}
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/js-logo.svg" />
     </>
   );
 }

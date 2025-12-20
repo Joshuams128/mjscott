@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Joshua Scott Portfolio",
   description: "Portfolio website of Joshua Scott, a web developer and designer.",
+  icons: {
+    icon: '/js-logo.svg',
+  },
 };
 
 export default function RootLayout({

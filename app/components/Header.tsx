@@ -47,8 +47,8 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
-        <a href="#home" className="text-2xl font-bold text-teal-300">
-          JS
+        <a href="#home" className="flex items-center">
+          <img src="/js-logo.svg" alt="JS Logo" className="h-10 w-auto" />
         </a>
 
         {/* Desktop Nav */}
