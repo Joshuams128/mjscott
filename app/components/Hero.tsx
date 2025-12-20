@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[80vh] flex flex-col justify-center items-center text-center px-6 bg-[#0b0b0b]"
+      className="min-h-[80vh] flex flex-col justify-center items-center text-center px-6 bg-[#0f172a]"
     >
       {/* Name */}
       <motion.h1

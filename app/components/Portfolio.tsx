@@ -120,7 +120,7 @@ export default function Portfolio() {
       : allProjects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-24 px-6 bg-[#0b0b0b] relative">
+    <section id="projects" className="py-24 px-6 bg-[#0f172a] relative">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
