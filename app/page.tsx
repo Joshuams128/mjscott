@@ -8,11 +8,24 @@ import Portfolio from "./components/Experience";
 import Footer from "./components/Footer";
 
 export default function Page() {
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(false);
   const [showName, setShowName] = useState(false);
   const [showPortfolio, setShowPortfolio] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
+    // Check if intro has already been shown in this session
+    const hasSeenIntro = sessionStorage.getItem("hasSeenIntro");
+    
+    if (hasSeenIntro) {
+      // Skip intro animation
+      setShowIntro(false);
+      return;
+    }
+
+    // Show intro animation for first visit
+    setShowIntro(true);
+    
     // Show name after brief delay
     const nameTimer = setTimeout(() => setShowName(true), 300);
     
@@ -20,7 +33,10 @@ export default function Page() {
     const portfolioTimer = setTimeout(() => setShowPortfolio(true), 1200);
     
     // Hide intro and show main content
-    const hideTimer = setTimeout(() => setShowIntro(false), 2800);
+    const hideTimer = setTimeout(() => {
+      setShowIntro(false);
+      sessionStorage.setItem("hasSeenIntro", "true");
+    }, 2800);
 
     return () => {
       clearTimeout(nameTimer);
@@ -28,6 +44,48 @@ export default function Page() {
       clearTimeout(hideTimer);
     };
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight - windowHeight;
+      const scrolled = window.scrollY;
+      const progress = Math.min(scrolled / documentHeight, 1);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Calculate background colors based on scroll progress
+  const getBackgroundColor = () => {
+    if (scrollProgress < 0.25) {
+      // Hero section: Blue-slate to deep blue
+      const t = scrollProgress / 0.25;
+      return `linear-gradient(to bottom, 
+        rgb(${15 + t * 5}, ${23 - t * 10}, ${42 + t * 20}), 
+        rgb(${10 - t * 3}, ${14 - t * 5}, ${26 + t * 10}))`;
+    } else if (scrollProgress < 0.5) {
+      // Projects section: Deep blue to purple-blue
+      const t = (scrollProgress - 0.25) / 0.25;
+      return `linear-gradient(to bottom, 
+        rgb(${20 + t * 15}, ${13 + t * 5}, ${62 - t * 15}), 
+        rgb(${7 + t * 8}, ${9 + t * 6}, ${36 + t * 10}))`;
+    } else if (scrollProgress < 0.75) {
+      // Experience section: Purple-blue to teal-dark
+      const t = (scrollProgress - 0.5) / 0.25;
+      return `linear-gradient(to bottom, 
+        rgb(${35 - t * 20}, ${18 + t * 10}, ${47 - t * 25}), 
+        rgb(${15 - t * 8}, ${15 + t * 15}, ${46 - t * 20}))`;
+    } else {
+      // Footer section: Teal-dark to deep slate
+      const t = (scrollProgress - 0.75) / 0.25;
+      return `linear-gradient(to bottom, 
+        rgb(${15 - t * 5}, ${28 - t * 8}, ${22 + t * 10}), 
+        rgb(${7 + t * 3}, ${20 - t * 5}, ${26 + t * 6}))`;
+    }
+  };
 
   return (
     <>
@@ -69,6 +127,22 @@ export default function Page() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Animated background wrapper */}
+      <div
+        className="fixed inset-0 -z-10 transition-all duration-700 ease-out"
+        style={{
+          background: getBackgroundColor(),
+        }}
+      >
+        {/* Radial gradient overlay for depth */}
+        <div
+          className="absolute inset-0 transition-opacity duration-700"
+          style={{
+            background: `radial-gradient(circle at top, rgba(0,242,254,${0.08 - scrollProgress * 0.05}), transparent)`,
+          }}
+        />
+      </div>
 
       <Header />
       <Hero />

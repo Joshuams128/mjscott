@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 type Project = {
   id: number;
@@ -11,6 +12,7 @@ type Project = {
   category: "Web" | "Experimental";
   extra?: string;
   thumbnail?: string;
+  preview?: string;
 };
 
 const allProjects: Project[] = [
@@ -23,6 +25,7 @@ const allProjects: Project[] = [
     image: "/images/dena.png",
     thumbnail: "/images/dena.png",
     category: "Web",
+    preview: "A comprehensive platform for startup founders with resources and mentorship."
   },
   {
     id: 2,
@@ -33,6 +36,7 @@ const allProjects: Project[] = [
     image: "/images/clayson.png",
     thumbnail: "/images/clayson.png",
     category: "Web",
+    preview: "Professional contracting website with project galleries and quote system."
   },
    {
     id: 3,
@@ -43,6 +47,7 @@ const allProjects: Project[] = [
     image: "/images/zero.png",
     thumbnail: "/images/zero.png",
     category: "Web",
+    preview: "Go-to-market operating system with tools and frameworks for startups."
   },
   {
     id: 4,
@@ -52,6 +57,7 @@ const allProjects: Project[] = [
     link: "https://buildwithdream.com/",
     image: "/images/dream.png",
     category: "Web",
+    preview: "Modern contractor showcase built with Next.js and smooth animations."
   },
   {
     id: 5,
@@ -61,6 +67,7 @@ const allProjects: Project[] = [
     link: "https://padiescakes.ca/",
     image: "/images/padiescakes.png",
     category: "Web",
+    preview: "E-commerce website for local bakery with online ordering system."
   },
   
   {
@@ -72,6 +79,7 @@ const allProjects: Project[] = [
     image: "/images/tdcimg.png",
     thumbnail: "/images/tdcimg.png",
     category: "Web",
+    preview: "Church website with event calendar and sermon archives."
   },
   {
     id: 7,
@@ -82,6 +90,7 @@ const allProjects: Project[] = [
     image: "/images/autothumb.png",
     thumbnail: "/images/autothumb.png",
     category: "Web",
+    preview: "Comprehensive automotive service platform with booking system."
   },
   {
     id: 8,
@@ -92,6 +101,7 @@ const allProjects: Project[] = [
     image: "/images/susanbrown.png",
     thumbnail: "/images/susanbrown.png",
     category: "Web",
+    preview: "Professional workshop website with booking and testimonials."
   },
   {
     id: 9,
@@ -101,6 +111,7 @@ const allProjects: Project[] = [
     link: "https://madmovies.mjscott.ca/#/home/",
     image: "/images/movies.png",
     category: "Experimental",
+    preview: "Marvel movie database with custom SQL backend and user reviews."
   },
   
 ];
@@ -113,6 +124,7 @@ export default function Portfolio() {
 
   const [activeCategory, setActiveCategory] =
     useState<typeof categories[number]>("All");
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const filteredProjects =
     activeCategory === "All"
@@ -120,7 +132,7 @@ export default function Portfolio() {
       : allProjects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-24 px-6 bg-[#0f172a] relative">
+    <section id="projects" className="py-24 px-6 relative">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -150,15 +162,14 @@ export default function Portfolio() {
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {filteredProjects.map((project, i) => (
-          <motion.a
+          <motion.div
             key={project.id}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg"
+            onMouseEnter={() => setHoveredProject(project.id)}
+            onMouseLeave={() => setHoveredProject(null)}
           >
             {/* Image Thumbnail with subtle zoom */}
             <div className="overflow-hidden rounded-xl relative">
@@ -188,13 +199,52 @@ export default function Portfolio() {
               )}
             </div>
 
+            {/* Hover Popup Preview */}
+            <AnimatePresence>
+              {hoveredProject === project.id && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent flex flex-col justify-end p-6 z-10"
+                >
+                  <h3 className="text-2xl font-bold text-teal-300 mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-white/90 text-sm mb-3 line-clamp-2">
+                    {project.preview}
+                  </p>
+                  <p className="text-teal-300/80 text-xs mb-4">{project.extra}</p>
+                  <div className="flex gap-3">
+                    <Link
+                      href={`/project/${project.id}`}
+                      className="flex-1 bg-teal-500 hover:bg-teal-600 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      View Details
+                    </Link>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-white/10 hover:bg-white/20 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold transition-colors border border-white/20"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Live Site
+                    </a>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
             {/* Overlay extra info — always visible on mobile */}
             <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center px-4 transition-opacity
-                            opacity-100 sm:opacity-0 group-hover:opacity-100">
+                            opacity-100 sm:opacity-0 group-hover:opacity-100 pointer-events-none sm:pointer-events-auto">
               <h3 className="text-xl font-semibold text-purple-400 mb-2">{project.title}</h3>
               <p className="text-white/80 text-sm">{project.extra}</p>
               <span className="mt-4 inline-block text-sm text-teal-300">
-                View Project →
+                Hover for more →
               </span>
             </div>
 
@@ -203,7 +253,7 @@ export default function Portfolio() {
               <h3 className="text-white font-semibold">{project.title}</h3>
               <p className="text-white/60 text-sm">{project.desc}</p>
             </div>
-          </motion.a>
+          </motion.div>
         ))}
       </div>
     </section>

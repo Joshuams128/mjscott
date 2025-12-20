@@ -7,7 +7,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0f172a] py-10 text-center">
+    <footer className="bg-black/20 backdrop-blur-sm py-10 text-center">
       {/* Contact text */}
       <p className="text-white/70 mb-4">
         Contact me via{" "}
