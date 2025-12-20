@@ -8,10 +8,11 @@ import Portfolio from "./components/Experience";
 import Footer from "./components/Footer";
 
 export default function Page() {
-  const [showIntro, setShowIntro] = useState(false);
+  const [showIntro, setShowIntro] = useState(true);
   const [showName, setShowName] = useState(false);
   const [showPortfolio, setShowPortfolio] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [introComplete, setIntroComplete] = useState(false);
 
   useEffect(() => {
     // Check if intro has already been shown in this session
@@ -20,12 +21,10 @@ export default function Page() {
     if (hasSeenIntro) {
       // Skip intro animation
       setShowIntro(false);
+      setIntroComplete(true);
       return;
     }
 
-    // Show intro animation for first visit
-    setShowIntro(true);
-    
     // Show name after brief delay
     const nameTimer = setTimeout(() => setShowName(true), 300);
     
@@ -35,6 +34,7 @@ export default function Page() {
     // Hide intro and show main content
     const hideTimer = setTimeout(() => {
       setShowIntro(false);
+      setIntroComplete(true);
       sessionStorage.setItem("hasSeenIntro", "true");
     }, 2800);
 
@@ -133,6 +133,7 @@ export default function Page() {
         className="fixed inset-0 -z-10 transition-all duration-700 ease-out"
         style={{
           background: getBackgroundColor(),
+          opacity: introComplete ? 1 : 0,
         }}
       >
         {/* Radial gradient overlay for depth */}
@@ -144,11 +145,13 @@ export default function Page() {
         />
       </div>
 
-      <Header />
-      <Hero />
-      <Experience />
-      <Portfolio />
-      <Footer />
+      <div style={{ opacity: introComplete ? 1 : 0, transition: 'opacity 0.3s' }}>
+        <Header />
+        <Hero />
+        <Experience />
+        <Portfolio />
+        <Footer />
+      </div>
     </>
   );
 }
