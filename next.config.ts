@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export", // enables static export
-  // You can add other options here if needed
+  // Removed output: "export" to allow dynamic features
+  images: {
+    unoptimized: true, // if deploying to static hosting
+  },
 };
 
 export default nextConfig;
