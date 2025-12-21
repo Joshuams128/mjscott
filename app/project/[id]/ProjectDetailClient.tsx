@@ -12,10 +12,7 @@ type ProjectDetail = {
   image: string;
   category: "Web" | "Experimental";
   tech: string[];
-  features: string[];
-  challenges?: string[];
-  outcomes?: string[];
-  timeline?: string;
+  keyTasks?: string[];
   role?: string;
 };
 
@@ -77,11 +74,6 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
               <span className="px-4 py-2 bg-teal-500/20 text-teal-300 rounded-full text-sm">
                 {project.category}
               </span>
-              {project.timeline && (
-                <span className="px-4 py-2 bg-white/10 text-white/70 rounded-full text-sm">
-                  {project.timeline}
-                </span>
-              )}
               {project.role && (
                 <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm">
                   {project.role}
@@ -124,57 +116,19 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
                 </p>
               </motion.div>
 
-              {/* Features */}
-              {project.features && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6, duration: 0.6 }}
-                >
-                  <h2 className="text-3xl font-bold text-teal-300 mb-4">Key Features</h2>
-                  <ul className="space-y-3">
-                    {project.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <span className="text-teal-300 mt-1">✓</span>
-                        <span className="text-white/80">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )}
-
-              {/* Challenges */}
-              {project.challenges && (
+              {/* Key Tasks */}
+              {project.keyTasks && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7, duration: 0.6 }}
                 >
-                  <h2 className="text-3xl font-bold text-teal-300 mb-4">Challenges</h2>
+                  <h2 className="text-3xl font-bold text-teal-300 mb-4">Key Tasks</h2>
                   <ul className="space-y-3">
-                    {project.challenges.map((challenge, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <span className="text-purple-300 mt-1">•</span>
-                        <span className="text-white/80">{challenge}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )}
-
-              {/* Outcomes */}
-              {project.outcomes && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8, duration: 0.6 }}
-                >
-                  <h2 className="text-3xl font-bold text-teal-300 mb-4">Outcomes</h2>
-                  <ul className="space-y-3">
-                    {project.outcomes.map((outcome, index) => (
+                    {project.keyTasks.map((keyTask, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <span className="text-teal-300 mt-1">★</span>
-                        <span className="text-white/80">{outcome}</span>
+                        <span className="text-white/80">{keyTask}</span>
                       </li>
                     ))}
                   </ul>

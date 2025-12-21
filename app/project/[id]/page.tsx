@@ -9,10 +9,7 @@ type ProjectDetail = {
   image: string;
   category: "Web" | "Experimental";
   tech: string[];
-  features: string[];
-  challenges?: string[];
-  outcomes?: string[];
-  timeline?: string;
+  keyTasks?: string[];
   role?: string;
 };
 
@@ -25,74 +22,45 @@ const projectDetails: Record<number, ProjectDetail> = {
     link: "https://www.denastartuplab.com/",
     image: "/images/dena.png",
     category: "Web",
-    tech: ["Webflow", "Custom CSS", "JavaScript", "Animation Libraries"],
-    features: [
-      "Responsive design optimized for all devices",
-      "Interactive animations and transitions",
-      "Integrated contact forms and CRM",
-      "Resource library with filtering system",
-      "Mentor connection platform"
+    tech: ["Webflow",],
+    keyTasks: [
+     "Resolved alignment inconsistencies throughout the site",
+"Streamlined design for clarity and simplicity",
+"Refined user interface to reduce visual clutter"
     ],
-    challenges: [
-      "Creating smooth animations without impacting performance",
-      "Implementing complex filtering logic in Webflow",
-      "Ensuring brand consistency across all pages"
-    ],
-    outcomes: [
-      "Increased user engagement by 45%",
-      "Streamlined founder onboarding process",
-      "Positive feedback from startup community"
-    ],
-    timeline: "3 months",
-    role: "Lead Designer & Developer"
+    role: "Web Designer"
   },
   2: {
     id: 2,
     title: "Clayson Construction Services",
     desc: "Contracting website I worked on",
-    fullDescription: "A professional contracting website built for Clayson Construction, showcasing their services, portfolio, and providing easy ways for clients to request quotes and contact the team.",
+    fullDescription: "A professional contracting website for Clayson Construction that I worked on. it showcases their services, portfolio, and provides easy ways for clients to request quotes and contact the team.",
     link: "https://claysonconstruction.com/",
     image: "/images/clayson.png",
     category: "Web",
-    tech: ["WordPress", "Custom CSS", "PHP", "Contact Form 7"],
-    features: [
-      "Project portfolio with before/after galleries",
-      "Service pages with detailed descriptions",
-      "Quote request system",
-      "Mobile-responsive design",
-      "SEO optimization"
+    tech: ["WordPress", "Custom CSS" , "HTML"],
+    keyTasks: [
+      "Redesign multiple page layouts for improved usability",
+"Streamline user flow for seamless navigation",
+"Enhance overall site structure for intuitive interactions"
     ],
-    challenges: [
-      "Organizing large image galleries efficiently",
-      "Creating an intuitive quote request flow",
-      "Balancing visual appeal with load times"
-    ],
-    outcomes: [
-      "50% increase in quote requests",
-      "Improved mobile user experience",
-      "Enhanced brand credibility"
-    ],
-    timeline: "2 months",
     role: "Web Developer"
   },
   3: {
     id: 3,
     title: "Zero to Two",
     desc: "A GTM operating system for founders",
-    fullDescription: "Zero to Two is a go-to-market (GTM) operating system designed specifically for startup founders, providing tools, frameworks, and strategies to successfully launch and scale their products.",
+fullDescription: "Zero to Two is a go-to-market (GTM) operating system designed specifically for startup founders, providing tools, frameworks, and strategies to successfully launch and scale their products.\n\nI rebuilt the site from the ground up, giving it a fresh look and feel. I also designed a new logo to establish a stronger, more cohesive brand identity.",
     link: "https://gozerototwo.com/",
     image: "/images/zero.png",
     category: "Web",
-    tech: ["Webflow", "Custom Interactions", "Integrations", "Analytics"],
-    features: [
-      "Interactive GTM framework builder",
-      "Resource library with templates",
-      "Community features",
-      "Analytics dashboard",
-      "Email integration"
+    tech: ["Webflow",],
+     keyTasks: [
+      "Rebuild site for improved performance and structure",
+"Fix alignment issues across all pages",
+"Customize site design and create a new logo"
     ],
-    timeline: "4 months",
-    role: "Full Stack Designer"
+    role: "Web Designer"
   },
   4: {
     id: 4,
@@ -102,15 +70,12 @@ const projectDetails: Record<number, ProjectDetail> = {
     link: "https://buildwithdream.com/",
     image: "/images/dream.png",
     category: "Web",
-    tech: ["Next.js", "Tailwind CSS", "React", "Framer Motion"],
-    features: [
-      "Dynamic project showcase",
-      "Smooth page transitions",
-      "Contact form with validation",
-      "Image optimization",
-      "Fast page loads"
+    tech: ["Next.js", "Tailwind CSS", "React", "Framer Motion", "Vercel"],
+    keyTasks: [
+"Showcase services and project portfolio",
+"Simplify quote request process for clients",
+"Enable seamless client communication"
     ],
-    timeline: "2 months",
     role: "Frontend Developer"
   },
   5: {
@@ -121,16 +86,13 @@ const projectDetails: Record<number, ProjectDetail> = {
     link: "https://padiescakes.ca/",
     image: "/images/padiescakes.png",
     category: "Web",
-    tech: ["WordPress", "WooCommerce", "Custom CSS", "Payment Gateways"],
-    features: [
-      "Product catalog with categories",
-      "Shopping cart and checkout",
-      "Order management system",
-      "Custom cake request forms",
-      "Mobile-friendly design"
+    tech: ["WordPress", "WooCommerce", "Custom CSS"],
+    keyTasks: [
+"Enable online ordering for local customers",
+"Display product galleries to showcase baked goods",
+"Deliver secure checkout through WooCommerce"
     ],
-    timeline: "3 months",
-    role: "E-commerce Developer"
+    role: "Web Designer"
   },
   6: {
     id: 6,
@@ -141,14 +103,6 @@ const projectDetails: Record<number, ProjectDetail> = {
     image: "/images/tdcimg.png",
     category: "Web",
     tech: ["WordPress", "HTML", "CSS", "JavaScript"],
-    features: [
-      "Event calendar integration",
-      "Sermon archive with search",
-      "Community bulletin board",
-      "Donation integration",
-      "Mobile responsive"
-    ],
-    timeline: "2 months",
     role: "Web Developer"
   },
   7: {
@@ -159,35 +113,24 @@ const projectDetails: Record<number, ProjectDetail> = {
     link: "https://autodriva.com/",
     image: "/images/autothumb.png",
     category: "Web",
-    tech: ["WordPress", "JavaScript", "CSS", "Booking System"],
-    features: [
-      "Service booking system",
-      "Vendor directory",
-      "Blog and resources",
-      "User reviews and ratings",
-      "Mobile app integration"
+    tech: ["WordPress", "JavaScript", "CSS", "Booking System", "Elementor"],
+    keyTasks: [
+"Connect users with car services and resources",
+"Enable easy maintenance scheduling",
+"Provide comprehensive automotive support"
     ],
-    timeline: "4 months",
-    role: "Full Stack Developer"
+    role: "Designer & Developer"
   },
   8: {
     id: 8,
     title: "Susan Brown",
     desc: "Workshops That Build Confidence",
-    fullDescription: "A professional website for Susan Brown's confidence-building workshops, featuring course information, booking systems, and testimonials.",
+    fullDescription: "A professional website for Susan Brown's confidence-building workshops, featuring workshop information, booking systems, and testimonials.",
     link: "https://susanmbrown.com/",
     image: "/images/susanbrown.png",
     category: "Web",
-    tech: ["WordPress", "JavaScript", "CSS", "Event Management"],
-    features: [
-      "Workshop calendar and booking",
-      "Testimonial showcase",
-      "Resource downloads",
-      "Newsletter integration",
-      "Video content"
-    ],
-    timeline: "2 months",
-    role: "Web Designer & Developer"
+    tech: ["WordPress","Elementor"],
+    role: "Web Designer"
   },
   9: {
     id: 9,
@@ -198,14 +141,6 @@ const projectDetails: Record<number, ProjectDetail> = {
     image: "/images/movies.png",
     category: "Experimental",
     tech: ["PHP", "HTML", "CSS", "SQL", "MySQL"],
-    features: [
-      "Movie database with search",
-      "User reviews and ratings",
-      "Character profiles",
-      "Timeline visualization",
-      "Admin panel"
-    ],
-    timeline: "3 months",
     role: "Full Stack Developer"
   },
   10: {
@@ -217,26 +152,10 @@ const projectDetails: Record<number, ProjectDetail> = {
     image: "/images/neon.png",
     category: "Experimental",
     tech: ["JavaScript", "HTML5 Canvas", "CSS", "Game Physics"],
-    features: [
-      "Arrow key controls for smooth character movement",
-      "Dynamic enemy AI with pathfinding",
-      "Collectible targets and scoring system",
-      "Neon visual effects and animations",
-      "Collision detection system",
-      "Responsive canvas rendering"
-    ],
-    challenges: [
-      "Implementing efficient collision detection",
-      "Creating smooth enemy movement and AI behavior",
-      "Optimizing canvas rendering for performance",
-      "Designing balanced game difficulty"
-    ],
-    outcomes: [
+    keyTasks: [
       "Successfully created engaging gameplay loop",
-      "Achieved 60 FPS smooth animations",
       "Gained experience in game development concepts"
     ],
-    timeline: "2 months",
     role: "Game Developer"
   },
   11: {
@@ -248,26 +167,11 @@ const projectDetails: Record<number, ProjectDetail> = {
     image: "/images/panda.png",
     category: "Experimental",
     tech: ["JavaScript", "GSAP", "HTML5", "CSS", "Animation"],
-    features: [
-      "Custom-designed panda character and environment",
-      "GSAP-powered smooth animations",
-      "Interactive control panel with multiple states (Feed, Happy, Sad, Angry, Sick, Dead)",
-      "Bamboo-themed visual design",
-      "Responsive character reactions",
-      "Seamless state transitions"
-    ],
-    challenges: [
-      "Designing appealing character animations from scratch",
-      "Implementing smooth GSAP animation sequences",
-      "Creating intuitive state management system",
-      "Balancing animation timing for natural movement"
-    ],
-    outcomes: [
+    keyTasks: [
       "Successfully created engaging interactive character",
       "Mastered GSAP animation library",
       "Developed unique game concept with personality"
     ],
-    timeline: "3 months",
     role: "Game Designer & Developer"
   }
 };
