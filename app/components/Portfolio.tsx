@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { link } from "fs/promises";
 
 type Project = {
   id: number;
@@ -18,6 +19,27 @@ type Project = {
 const allProjects: Project[] = [
   {
     id: 1,
+    title: "TD Church",
+    desc: "A modern church website",
+    extra: "Next.js, Tailwind CSS, React, Vercel, Sanity CMS",
+    link: "https://tdchurch.ca/",
+    image: "/images/tdcimg.png",
+    thumbnail: "/images/tdcimg.png",
+    category: "Web",
+    preview: "Church website with event calendar and sermon archives."
+  },
+  {
+    id: 2,
+    title: "Build With Dream",
+    desc: " A contractors showcase and contact website.",
+    extra: "Next.js, Tailwind CSS, Vercel",
+    link: "https://buildwithdream.com/",
+    image: "/images/dream.png",
+    category: "Web",
+    preview: "Modern contractor showcase built with Next.js and smooth animations."
+  },
+  {
+    id: 3,
     title: "Dena Startup Labs",
     desc: "Startup for founders",
     extra: "Webflow",
@@ -28,7 +50,7 @@ const allProjects: Project[] = [
     preview: "A comprehensive platform for startup founders with resources and mentorship."
   },
   {
-    id: 2,
+    id: 4,
     title: "Clayson Contstruction Services",
     desc: " Contracting website I worked on.",
     extra: "WordPress, CSS",
@@ -39,7 +61,7 @@ const allProjects: Project[] = [
     preview: "Professional contracting website with project galleries and quote system."
   },
    {
-    id: 3,
+    id: 5,
     title: "Zero to Two",
     desc: " A GTM operating system for founders.",
     extra: "Webflow",
@@ -50,17 +72,7 @@ const allProjects: Project[] = [
     preview: "Go-to-market operating system with tools and frameworks for startups."
   },
   {
-    id: 4,
-    title: "Build With Dream",
-    desc: " A contractors showcase and contact website.",
-    extra: "Next.js, Tailwind CSS",
-    link: "https://buildwithdream.com/",
-    image: "/images/dream.png",
-    category: "Web",
-    preview: "Modern contractor showcase built with Next.js and smooth animations."
-  },
-  {
-    id: 5,
+    id: 6,
     title: "Padies Cakes",
     desc: "Online storefront for a baker.",
     extra: "Wordpress, CSS, WooCommerce",
@@ -68,18 +80,6 @@ const allProjects: Project[] = [
     image: "/images/padiescakes.png",
     category: "Web",
     preview: "E-commerce website for local bakery with online ordering system."
-  },
-  
-  {
-    id: 6,
-    title: "TD Church",
-    desc: "Church site with custom code for design.",
-    extra: "WordPress, HTML, CSS",
-    link: "https://tdchurch.ca/",
-    image: "/images/tdcimg.png",
-    thumbnail: "/images/tdcimg.png",
-    category: "Web",
-    preview: "Church website with event calendar and sermon archives."
   },
   {
     id: 7,

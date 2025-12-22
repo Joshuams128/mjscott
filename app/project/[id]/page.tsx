@@ -16,54 +16,22 @@ type ProjectDetail = {
 const projectDetails: Record<number, ProjectDetail> = {
   1: {
     id: 1,
-    title: "Dena Startup Labs",
-    desc: "Startup for founders",
-    fullDescription: "Dena Startup Labs is a comprehensive platform designed to support founders in their entrepreneurial journey. The website serves as a hub for startup resources, mentorship connections, and community building.",
-    link: "https://www.denastartuplab.com/",
-    image: "/images/dena.png",
+    title: "TD Church",
+    desc: "A modern church website",
+fullDescription: "TDC Church is a modern church website designed to connect the congregation with service times, events, and sermons. Built with a headless CMS, the site empowers church staff to easily manage content while maintaining a clean, welcoming online presence.",
+    link: "https://tdchurch.ca/",
+    image: "/images/tdcimg.png",
     category: "Web",
-    tech: ["Webflow",],
+    tech: ["Next.js", "Tailwind CSS", "React", "Vercel", "Sanity CMS"],
     keyTasks: [
-     "Resolved alignment inconsistencies throughout the site",
-"Streamlined design for clarity and simplicity",
-"Refined user interface to reduce visual clutter"
+"Provide easy access to service times and events",
+"Showcase services with integrated media",
+"Enable church staff to manage content via CMS"
     ],
-    role: "Web Designer"
+    role: "Frontend Developer"
   },
   2: {
     id: 2,
-    title: "Clayson Construction Services",
-    desc: "Contracting website I worked on",
-    fullDescription: "A professional contracting website for Clayson Construction that I worked on. it showcases their services, portfolio, and provides easy ways for clients to request quotes and contact the team.",
-    link: "https://claysonconstruction.com/",
-    image: "/images/clayson.png",
-    category: "Web",
-    tech: ["WordPress", "Custom CSS" , "HTML"],
-    keyTasks: [
-      "Redesign multiple page layouts for improved usability",
-"Streamline user flow for seamless navigation",
-"Enhance overall site structure for intuitive interactions"
-    ],
-    role: "Web Developer"
-  },
-  3: {
-    id: 3,
-    title: "Zero to Two",
-    desc: "A GTM operating system for founders",
-fullDescription: "Zero to Two is a go-to-market (GTM) operating system designed specifically for startup founders, providing tools, frameworks, and strategies to successfully launch and scale their products.\n\nI rebuilt the site from the ground up, giving it a fresh look and feel. I also designed a new logo to establish a stronger, more cohesive brand identity.",
-    link: "https://gozerototwo.com/",
-    image: "/images/zero.png",
-    category: "Web",
-    tech: ["Webflow",],
-     keyTasks: [
-      "Rebuild site for improved performance and structure",
-"Fix alignment issues across all pages",
-"Customize site design and create a new logo"
-    ],
-    role: "Web Designer"
-  },
-  4: {
-    id: 4,
     title: "Build With Dream",
     desc: "A contractors showcase and contact website",
     fullDescription: "Build With Dream is a modern contractor showcase website built with Next.js and Tailwind CSS, featuring a clean design, project galleries, and streamlined contact forms for potential clients.",
@@ -78,8 +46,56 @@ fullDescription: "Zero to Two is a go-to-market (GTM) operating system designed 
     ],
     role: "Frontend Developer"
   },
+  3: {
+    id: 3,
+    title: "Dena Startup Labs",
+    desc: "Startup for founders",
+    fullDescription: "Dena Startup Labs is a comprehensive platform designed to support founders in their entrepreneurial journey. The website serves as a hub for startup resources, mentorship connections, and community building.",
+    link: "https://www.denastartuplab.com/",
+    image: "/images/dena.png",
+    category: "Web",
+    tech: ["Webflow",],
+    keyTasks: [
+     "Resolved alignment inconsistencies throughout the site",
+"Streamlined design for clarity and simplicity",
+"Refined user interface to reduce visual clutter"
+    ],
+    role: "Web Designer"
+  },
+  4: {
+    id: 4,
+    title: "Clayson Construction Services",
+    desc: "Contracting website I worked on",
+    fullDescription: "A professional contracting website for Clayson Construction that I worked on. it showcases their services, portfolio, and provides easy ways for clients to request quotes and contact the team.",
+    link: "https://claysonconstruction.com/",
+    image: "/images/clayson.png",
+    category: "Web",
+    tech: ["WordPress", "Custom CSS" , "HTML"],
+    keyTasks: [
+      "Redesign multiple page layouts for improved usability",
+"Streamline user flow for seamless navigation",
+"Enhance overall site structure for intuitive interactions"
+    ],
+    role: "Web Developer"
+  },
   5: {
     id: 5,
+    title: "Zero to Two",
+    desc: "A GTM operating system for founders",
+fullDescription: "Zero to Two is a go-to-market (GTM) operating system designed specifically for startup founders, providing tools, frameworks, and strategies to successfully launch and scale their products.\n\nI rebuilt the site from the ground up, giving it a fresh look and feel. I also designed a new logo to establish a stronger, more cohesive brand identity.",
+    link: "https://gozerototwo.com/",
+    image: "/images/zero.png",
+    category: "Web",
+    tech: ["Webflow",],
+     keyTasks: [
+      "Rebuild site for improved performance and structure",
+"Fix alignment issues across all pages",
+"Customize site design and create a new logo"
+    ],
+    role: "Web Designer"
+  },
+  6: {
+    id: 6,
     title: "Padies Cakes",
     desc: "Online storefront for a baker",
     fullDescription: "An e-commerce website for Padies Cakes, a local bakery, featuring online ordering, product galleries, and integrated payment processing through WooCommerce.",
@@ -93,17 +109,6 @@ fullDescription: "Zero to Two is a go-to-market (GTM) operating system designed 
 "Deliver secure checkout through WooCommerce"
     ],
     role: "Web Designer"
-  },
-  6: {
-    id: 6,
-    title: "TD Church",
-    desc: "Church site with custom code for design",
-    fullDescription: "A church website featuring event calendars, sermon archives, and community engagement tools, built with custom HTML/CSS on WordPress.",
-    link: "https://tdchurch.ca/",
-    image: "/images/tdcimg.png",
-    category: "Web",
-    tech: ["WordPress", "HTML", "CSS", "JavaScript"],
-    role: "Web Developer"
   },
   7: {
     id: 7,

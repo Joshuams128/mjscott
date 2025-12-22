@@ -39,6 +39,15 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -57,6 +66,7 @@ export default function Header() {
             <a
               key={section.id}
               href={`#${section.id}`}
+              onClick={(e) => handleNavClick(e, section.id)}
               className={`transition-colors ${
                 activeSection === section.id
                   ? "text-teal-300 font-semibold"
@@ -92,7 +102,7 @@ export default function Header() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, section.id)}
                 className={`text-lg transition-colors ${
                   activeSection === section.id
                     ? "text-teal-300 font-semibold"
