@@ -36,7 +36,7 @@ fullDescription: "TDC Church is a modern church website designed to connect the 
     desc: "A contractors showcase and contact website",
     fullDescription: "Build With Dream is a modern contractor showcase website built with Next.js and Tailwind CSS, featuring a clean design, project galleries, and streamlined contact forms for potential clients.",
     link: "https://buildwithdream.com/",
-    image: "/images/dream.png",
+    image: "/images/dreamb.png",
     category: "Web",
     tech: ["Next.js", "Tailwind CSS", "React", "Framer Motion", "Vercel"],
     keyTasks: [
@@ -48,6 +48,23 @@ fullDescription: "TDC Church is a modern church website designed to connect the 
   },
   3: {
     id: 3,
+    title: "Susan Brown",
+    desc: "Workshops That Build Confidence",
+    fullDescription: "A professional website for Susan Brown's confidence-building workshops, featuring workshop information, booking systems, and testimonials.",
+    link: "https://susanmbrown.com/",
+    image: "/images/susan2.png",
+    category: "Web",
+    tech: ["Next.js", "Tailwind CSS", "Sanity"],
+    keyTasks: [
+  "Built custom workshop booking system with date selection and inquiry forms",
+  "Created dynamic testimonials carousel with participant stories and credentials",
+  "Added interactive workshop cards with detailed content previews and CTAs"
+],
+    
+    role: "Web Developer"
+  },
+  4: {
+    id: 4,
     title: "Dena Startup Labs",
     desc: "Startup for founders",
     fullDescription: "Dena Startup Labs is a comprehensive platform designed to support founders in their entrepreneurial journey. The website serves as a hub for startup resources, mentorship connections, and community building.",
@@ -62,8 +79,8 @@ fullDescription: "TDC Church is a modern church website designed to connect the 
     ],
     role: "Web Designer"
   },
-  4: {
-    id: 4,
+  5: {
+    id: 5,
     title: "Clayson Construction Services",
     desc: "Contracting website I worked on",
     fullDescription: "A professional contracting website for Clayson Construction that I worked on. it showcases their services, portfolio, and provides easy ways for clients to request quotes and contact the team.",
@@ -78,8 +95,8 @@ fullDescription: "TDC Church is a modern church website designed to connect the 
     ],
     role: "Web Developer"
   },
-  5: {
-    id: 5,
+  6: {
+    id: 6,
     title: "Zero to Two",
     desc: "A GTM operating system for founders",
 fullDescription: "Zero to Two is a go-to-market (GTM) operating system designed specifically for startup founders, providing tools, frameworks, and strategies to successfully launch and scale their products.\n\nI rebuilt the site from the ground up, giving it a fresh look and feel. I also designed a new logo to establish a stronger, more cohesive brand identity.",
@@ -94,8 +111,8 @@ fullDescription: "Zero to Two is a go-to-market (GTM) operating system designed 
     ],
     role: "Web Designer"
   },
-  6: {
-    id: 6,
+  7: {
+    id: 7,
     title: "Padies Cakes",
     desc: "Online storefront for a baker",
     fullDescription: "An e-commerce website for Padies Cakes, a local bakery, featuring online ordering, product galleries, and integrated payment processing through WooCommerce.",
@@ -110,8 +127,8 @@ fullDescription: "Zero to Two is a go-to-market (GTM) operating system designed 
     ],
     role: "Web Designer"
   },
-  7: {
-    id: 7,
+  8: {
+    id: 8,
     title: "Autodriva",
     desc: "All-in-one automotive service site",
     fullDescription: "Autodriva is a comprehensive automotive service platform connecting users with car services, maintenance scheduling, and automotive resources.",
@@ -125,17 +142,6 @@ fullDescription: "Zero to Two is a go-to-market (GTM) operating system designed 
 "Provide comprehensive automotive support"
     ],
     role: "Designer & Developer"
-  },
-  8: {
-    id: 8,
-    title: "Susan Brown",
-    desc: "Workshops That Build Confidence",
-    fullDescription: "A professional website for Susan Brown's confidence-building workshops, featuring workshop information, booking systems, and testimonials.",
-    link: "https://susanmbrown.com/",
-    image: "/images/susanbrown.png",
-    category: "Web",
-    tech: ["WordPress","Elementor"],
-    role: "Web Designer"
   },
   9: {
     id: 9,

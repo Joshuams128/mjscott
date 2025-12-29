@@ -34,12 +34,23 @@ const allProjects: Project[] = [
     desc: " A contractors showcase and contact website.",
     extra: "Next.js, Tailwind CSS, Vercel",
     link: "https://buildwithdream.com/",
-    image: "/images/dream.png",
+    image: "/images/dreamb.png",
     category: "Web",
     preview: "Modern contractor showcase built with Next.js and smooth animations."
   },
   {
     id: 3,
+    title: "Susan Brown",
+    desc: "Workshops That Build Confidence",
+    extra: "Next.js, Tailwind CSS, Sanity",
+    link: "https://susanmbrown.com/",
+    image: "/images/susan2.png",
+    thumbnail: "/images/susan2.png",
+    category: "Web",
+    preview: "Professional workshop website with booking and testimonials."
+  },
+  {
+    id: 4,
     title: "Dena Startup Labs",
     desc: "Startup for founders",
     extra: "Webflow",
@@ -50,7 +61,7 @@ const allProjects: Project[] = [
     preview: "A comprehensive platform for startup founders with resources and mentorship."
   },
   {
-    id: 4,
+    id: 5,
     title: "Clayson Contstruction Services",
     desc: " Contracting website I worked on.",
     extra: "WordPress, CSS",
@@ -61,7 +72,7 @@ const allProjects: Project[] = [
     preview: "Professional contracting website with project galleries and quote system."
   },
    {
-    id: 5,
+    id: 6,
     title: "Zero to Two",
     desc: " A GTM operating system for founders.",
     extra: "Webflow",
@@ -72,7 +83,7 @@ const allProjects: Project[] = [
     preview: "Go-to-market operating system with tools and frameworks for startups."
   },
   {
-    id: 6,
+    id: 7,
     title: "Padies Cakes",
     desc: "Online storefront for a baker.",
     extra: "Wordpress, CSS, WooCommerce",
@@ -82,7 +93,7 @@ const allProjects: Project[] = [
     preview: "E-commerce website for local bakery with online ordering system."
   },
   {
-    id: 7,
+    id: 8,
     title: "Autodriva",
     desc: "All-in-one automotive service site.",
     extra: "WordPress, JS, CSS",
@@ -91,17 +102,6 @@ const allProjects: Project[] = [
     thumbnail: "/images/autothumb.png",
     category: "Web",
     preview: "Comprehensive automotive service platform with booking system."
-  },
-  {
-    id: 8,
-    title: "Susan Brown",
-    desc: "Workshops That Build Confidence",
-    extra: "WordPress, JS, CSS",
-    link: "https://susanmbrown.com/",
-    image: "/images/susanbrown.png",
-    thumbnail: "/images/susanbrown.png",
-    category: "Web",
-    preview: "Professional workshop website with booking and testimonials."
   },
   {
     id: 9,

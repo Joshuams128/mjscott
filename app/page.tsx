@@ -25,6 +25,9 @@ export default function Page() {
       return;
     }
 
+    // Disable scrolling during intro
+    document.body.style.overflow = 'hidden';
+
     // Show name after brief delay
     const nameTimer = setTimeout(() => setShowName(true), 300);
     
@@ -36,12 +39,16 @@ export default function Page() {
       setShowIntro(false);
       setIntroComplete(true);
       sessionStorage.setItem("hasSeenIntro", "true");
+      // Re-enable scrolling
+      document.body.style.overflow = 'unset';
     }, 2800);
 
     return () => {
       clearTimeout(nameTimer);
       clearTimeout(portfolioTimer);
       clearTimeout(hideTimer);
+      // Cleanup: ensure scrolling is re-enabled if component unmounts
+      document.body.style.overflow = 'unset';
     };
   }, []);
 
