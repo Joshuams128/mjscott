@@ -14,6 +14,11 @@ type ProjectDetail = {
   tech: string[];
   keyTasks?: string[];
   role?: string;
+  // Product-focused fields
+  problem?: string;
+  audience?: string;
+  reasoning?: string;
+  nextSteps?: string[];
 };
 
 interface ProjectDetailClientProps {
@@ -116,8 +121,66 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
                 </p>
               </motion.div>
 
-              {/* Key Tasks */}
-              {project.keyTasks && (
+              {/* Product-Focused Sections */}
+              {project.problem && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.6 }}
+                >
+                  <h2 className="text-3xl font-bold text-teal-300 mb-4">What problem did this solve?</h2>
+                  <p className="text-white/80 text-lg leading-relaxed">
+                    {project.problem}
+                  </p>
+                </motion.div>
+              )}
+
+              {project.audience && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7, duration: 0.6 }}
+                >
+                  <h2 className="text-3xl font-bold text-teal-300 mb-4">Who was it for?</h2>
+                  <p className="text-white/80 text-lg leading-relaxed">
+                    {project.audience}
+                  </p>
+                </motion.div>
+              )}
+
+              {project.reasoning && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                >
+                  <h2 className="text-3xl font-bold text-teal-300 mb-4">Why was it built this way?</h2>
+                  <p className="text-white/80 text-lg leading-relaxed">
+                    {project.reasoning}
+                  </p>
+                </motion.div>
+              )}
+
+              {project.nextSteps && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.9, duration: 0.6 }}
+                >
+                  <h2 className="text-3xl font-bold text-teal-300 mb-4">What would I improve next?</h2>
+                  <ul className="space-y-3">
+                    {project.nextSteps.map((step, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <span className="text-teal-300 mt-1">→</span>
+                        <span className="text-white/80 text-lg">{step}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+
+              {/* Key Tasks (fallback for projects without product-focused fields) */}
+              {project.keyTasks && !project.problem && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

@@ -21,119 +21,119 @@ const allProjects: Project[] = [
     id: 1,
     title: "TD Church",
     desc: "A modern church website",
-    extra: "Next.js, Tailwind CSS, React, Vercel, Sanity CMS",
+    extra: "Optimized for SEO using Server Components and static generation. Empowered non-technical staff with headless CMS.",
     link: "https://tdchurch.ca/",
     image: "/images/tdcimg.png",
     thumbnail: "/images/tdcimg.png",
     category: "Web",
-    preview: "Church website with event calendar and sermon archives."
+    preview: "Centralized platform reducing communication gaps and enabling autonomous content management for church staff."
   },
   {
     id: 2,
     title: "Build With Dream",
     desc: " A contractors showcase and contact website.",
-    extra: "Next.js, Tailwind CSS, Vercel",
+    extra: "Optimized images with Next.js for fast loading. Static generation for instant page loads from search.",
     link: "https://buildwithdream.com/",
     image: "/images/dreamb.png",
     category: "Web",
-    preview: "Modern contractor showcase built with Next.js and smooth animations."
+    preview: "Transformed online presence to convert visitors into qualified leads through visual storytelling and streamlined contact flow."
   },
   {
     id: 3,
     title: "Susan Brown",
     desc: "Workshops That Build Confidence",
-    extra: "Next.js, Tailwind CSS, Sanity",
+    extra: "Headless CMS for autonomous schedule management. Social proof prioritized for conversion optimization.",
     link: "https://susanmbrown.com/",
     image: "/images/susan2.png",
     thumbnail: "/images/susan2.png",
     category: "Web",
-    preview: "Professional workshop website with booking and testimonials."
+    preview: "Streamlined booking flow that increased workshop conversions while reducing administrative overhead."
   },
   {
     id: 4,
     title: "Dena Startup Labs",
     desc: "Startup for founders",
-    extra: "Webflow",
+    extra: "Webflow for rapid content iteration. Refined UI to project operational excellence to detail-oriented founders.",
     link: "https://www.denastartuplab.com/",
     image: "/images/dena.png",
     thumbnail: "/images/dena.png",
     category: "Web",
-    preview: "A comprehensive platform for startup founders with resources and mentorship."
+    preview: "Rebuilt brand credibility through visual consistency, reducing bounce rates and increasing program applications."
   },
   {
     id: 5,
     title: "Clayson Contstruction Services",
     desc: " Contracting website I worked on.",
-    extra: "WordPress, CSS",
+    extra: "Mobile-optimized for 70% mobile traffic. Information architecture restructured around customer needs.",
     link: "https://claysonconstruction.com/",
     image: "/images/clayson.png",
     thumbnail: "/images/clayson.png",
     category: "Web",
-    preview: "Professional contracting website with project galleries and quote system."
+    preview: "Redesigned user flow to reduce bounce rates and improve lead quality through clearer service navigation."
   },
    {
     id: 6,
     title: "Zero to Two",
     desc: " A GTM operating system for founders.",
-    extra: "Webflow",
+    extra: "Complete brand rebuild with new logo. Performance optimization to signal operational excellence.",
     link: "https://gozerototwo.com/",
     image: "/images/zero.png",
     thumbnail: "/images/zero.png",
     category: "Web",
-    preview: "Go-to-market operating system with tools and frameworks for startups."
+    preview: "Transformed brand positioning to align with premium GTM framework targeting experienced founders."
   },
   {
     id: 7,
     title: "Padies Cakes",
     desc: "Online storefront for a baker.",
-    extra: "Wordpress, CSS, WooCommerce",
+    extra: "WooCommerce for proven payment processing. Visual-first galleries for emotional purchasing decisions.",
     link: "https://padiescakes.ca/",
     image: "/images/padiescakes.png",
     category: "Web",
-    preview: "E-commerce website for local bakery with online ordering system."
+    preview: "Enabled 24/7 ordering and freed baker from manual coordination to focus on product quality."
   },
   {
     id: 8,
     title: "Autodriva",
     desc: "All-in-one automotive service site.",
-    extra: "WordPress, JS, CSS",
+    extra: "Real-time booking integration with provider calendars. Mobile-first for on-the-road service searches.",
     link: "https://autodriva.com/",
     image: "/images/autothumb.png",
     thumbnail: "/images/autothumb.png",
     category: "Web",
-    preview: "Comprehensive automotive service platform with booking system."
+    preview: "Centralized platform reducing friction in finding trusted service providers and scheduling maintenance."
   },
   {
     id: 9,
     title: "Mad Movies",
     desc: "Imitation site for Marvel movies.",
-    extra: "PHP, HTML, CSS, SQL",
+    extra: "Custom SQL to learn database optimization. User reviews for practicing data validation patterns.",
     link: "https://madmovies.mjscott.ca/#/home/",
     image: "/images/movies.png",
     category: "Experimental",
-    preview: "Marvel movie database with custom SQL backend and user reviews."
+    preview: "Learning project exploring full-stack architecture and database relationships beyond frontend work."
   },
   {
     id: 10,
     title: "Neon Maze",
     desc: "Interactive maze game with enemies.",
-    extra: "JavaScript, Canvas, Game Development",
+    extra: "Vanilla JavaScript to understand rendering pipelines. Custom collision detection for spatial algorithms.",
     link: "https://neonmaze.mjscott.ca/",
     image: "/images/neon.png",
     thumbnail: "/images/neon.png",
     category: "Experimental",
-    preview: "Neon-themed maze game with arrow key controls, enemies, and collectible targets."
+    preview: "Hands-on exploration of game physics and performance optimization applicable to complex interactive UIs."
   },
   {
     id: 11,
     title: "Panda Express",
     desc: "Interactive panda game with GSAP animations.",
-    extra: "JavaScript, GSAP, Game Development",
+    extra: "GSAP mastery for production-ready animations. State management practice for interactive UI elements.",
     link: "https://pandagame.mjscott.ca/",
     image: "/images/panda.png",
     thumbnail: "/images/panda.png",
     category: "Experimental",
-    preview: "A panda game designed from scratch with smooth GSAP animations and interactive controls."
+    preview: "Animation lab for learning timeline coordination and microinteractions that improve product engagement."
   },
   
 ];

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
-  const titles = ["Frontend Developer", "UX/UI Designer", "Web Designer"];
+  const titles = ["Frontend Engineer", "UX/UI Designer", "Web Developer", "Problem Solver"];
   const [currentTitle, setCurrentTitle] = useState("");
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
@@ -68,9 +68,11 @@ export default function Hero() {
         transition={{ delay: 0.3, duration: 0.6 }}
         className="mt-4 text-base sm:text-lg text-white/70 max-w-2xl"
       >
-        I build sleek, interactive web experiences using modern frameworks like{" "}
-        <span className="text-white">React & Next.js</span>, alongside platforms like{" "}
-        <span className="text-white">WordPress, Shopify, and Webflow</span>.
+        I build digital products that solve real problems for users and businesses.
+        From{" "}
+        <span className="text-white">optimizing for SEO with Server Components</span> to{" "}
+        <span className="text-white">streamlining user flows that increase conversions</span>, 
+        I focus on outcomes, not just output.
       </motion.p>
 
 
