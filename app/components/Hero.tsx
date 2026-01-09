@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
-  const titles = ["Frontend Engineer", "UX/UI Designer", "Web Developer", "Problem Solver"];
+  const titles = ["Frontend Developer", "UX/UI Designer", "Problem Solver"];
   const [currentTitle, setCurrentTitle] = useState("");
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
