@@ -68,11 +68,7 @@ export default function Hero() {
         transition={{ delay: 0.3, duration: 0.6 }}
         className="mt-4 text-base sm:text-lg text-white/70 max-w-2xl"
       >
-        I build digital products that solve real problems for users and businesses.
-        From{" "}
-        <span className="text-white">optimizing for SEO with Server Components</span> to{" "}
-        <span className="text-white">streamlining user flows that increase conversions</span>, 
-        I focus on outcomes, not just output.
+        I build modern, high-performance websites for clients using React, Next.js, Sanity CMS, WordPress, and Shopify. I focus on creating sites that are fast, easy for clients to manage, and designed to convert visitors into customers.
       </motion.p>
 
 

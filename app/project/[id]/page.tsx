@@ -21,9 +21,9 @@ type ProjectDetail = {
 const projectDetails: Record<number, ProjectDetail> = {
   1: {
     id: 1,
-    title: "TD Church",
+    title: "TDChurch",
     desc: "A modern church website",
-fullDescription: "TDC Church needed a way to keep their growing congregation informed about service times, events, and sermons without relying on fragmented communication channels. I built a centralized hub that empowers church staff to manage content independently while providing members a clean, welcoming digital home.",
+fullDescription: "TDChurch needed a way to keep their growing congregation informed about service times, events, and sermons without relying on fragmented communication channels. I built a centralized hub that empowers church staff to manage content independently while providing members a clean, welcoming digital home.",
     link: "https://tdchurch.ca/",
     image: "/images/tdcimg.png",
     category: "Web",

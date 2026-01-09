@@ -19,7 +19,7 @@ type Project = {
 const allProjects: Project[] = [
   {
     id: 1,
-    title: "TD Church",
+    title: "TDChurch",
     desc: "A modern church website",
     extra: "Optimized for SEO using Server Components and static generation. Empowered non-technical staff with headless CMS.",
     link: "https://tdchurch.ca/",
