@@ -68,7 +68,7 @@ export default function Hero() {
         transition={{ delay: 0.3, duration: 0.6 }}
         className="mt-4 text-base sm:text-lg text-white/70 max-w-2xl"
       >
-        I build modern, high-performance websites for clients using React, Next.js, Sanity CMS, WordPress, and Shopify. I focus on creating sites that are fast, easy for clients to manage, and designed to convert visitors into customers.
+        I build modern, high-performance websites for clients using React, Next.js, Sanity CMS, WordPress, and Webflow. I focus on creating sites that are fast, easy for clients to manage, and designed to convert visitors into customers.
       </motion.p>
 
 

@@ -5,7 +5,7 @@ export default function Head() {
 
   return (
     <>
-      <title>Joshua Bob | Frontend Developer</title>
+      <title>Joshua Scott | Frontend Developer</title>
       <meta name="description" content="Freelance Frontend Developer — React, Next.js, WordPress, Shopify" />
 
       {/* Open Graph / Social Preview */}
