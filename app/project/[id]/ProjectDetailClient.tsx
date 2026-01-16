@@ -10,7 +10,7 @@ type ProjectDetail = {
   fullDescription: string;
   link: string;
   image: string;
-  category: "Web" | "Experimental";
+  category: "Web";
   tech: string[];
   keyTasks?: string[];
   role?: string;

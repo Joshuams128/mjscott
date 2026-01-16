@@ -10,7 +10,7 @@ type Project = {
   desc: string;
   link: string;
   image: string;
-  category: "Web" | "Experimental";
+  category: "Web";
   extra?: string;
   thumbnail?: string;
   preview?: string;
@@ -102,88 +102,28 @@ const allProjects: Project[] = [
     thumbnail: "/images/autothumb.png",
     category: "Web",
     preview: "Centralized platform reducing friction in finding trusted service providers and scheduling maintenance."
-  },
-  {
-    id: 9,
-    title: "Mad Movies",
-    desc: "Imitation site for Marvel movies.",
-    extra: "Custom SQL to learn database optimization. User reviews for practicing data validation patterns.",
-    link: "https://madmovies.mjscott.ca/#/home/",
-    image: "/images/movies.png",
-    category: "Experimental",
-    preview: "Learning project exploring full-stack architecture and database relationships beyond frontend work."
-  },
-  {
-    id: 10,
-    title: "Neon Maze",
-    desc: "Interactive maze game with enemies.",
-    extra: "Vanilla JavaScript to understand rendering pipelines. Custom collision detection for spatial algorithms.",
-    link: "https://neonmaze.mjscott.ca/",
-    image: "/images/neon.png",
-    thumbnail: "/images/neon.png",
-    category: "Experimental",
-    preview: "Hands-on exploration of game physics and performance optimization applicable to complex interactive UIs."
-  },
-  {
-    id: 11,
-    title: "Panda Express",
-    desc: "Interactive panda game with GSAP animations.",
-    extra: "GSAP mastery for production-ready animations. State management practice for interactive UI elements.",
-    link: "https://pandagame.mjscott.ca/",
-    image: "/images/panda.png",
-    thumbnail: "/images/panda.png",
-    category: "Experimental",
-    preview: "Animation lab for learning timeline coordination and microinteractions that improve product engagement."
-  },
-  
+  }
 ];
-
-const categories = ["All", "Web", "Experimental"] as const;
 
 export default function Portfolio() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const asset = (p: string) => `${basePath}${p.startsWith("/") ? p : `/${p}`}`;
 
-  const [activeCategory, setActiveCategory] =
-    useState<typeof categories[number]>("All");
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-
-  const filteredProjects =
-    activeCategory === "All"
-      ? allProjects
-      : allProjects.filter((p) => p.category === activeCategory);
 
   return (
     <section id="projects" className="py-24 px-6 relative">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          <span className="text-teal-300">Featured Projects</span>
+          <span className="text-teal-300">Client Work</span>
         </h2>
-        <p className="text-white/60">Filter and explore my latest work.</p>
-      </div>
-
-      {/* Category Tabs */}
-      <div className="flex justify-center gap-6 mb-12 flex-wrap">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-2 rounded-full font-medium transition
-              ${
-                activeCategory === cat
-                  ? "bg-purple-500 text-white shadow-lg"
-                  : "bg-white/5 text-white/60 hover:bg-white/10"
-              }`}
-          >
-            {cat}
-          </button>
-        ))}
+        <p className="text-white/60">Real-world solutions for real businesses.</p>
       </div>
 
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        {filteredProjects.map((project, i) => (
+        {allProjects.map((project, i) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 30 }}

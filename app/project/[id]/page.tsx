@@ -7,7 +7,7 @@ type ProjectDetail = {
   fullDescription: string;
   link: string;
   image: string;
-  category: "Web" | "Experimental";
+  category: "Web";
   tech: string[];
   keyTasks?: string[];
   role?: string;
@@ -170,63 +170,6 @@ fullDescription: "Zero to Two had a brand identity and site that didn't reflect 
       "Create service history export for vehicle resale value documentation"
     ],
     role: "Product Engineer"
-  },
-  9: {
-    id: 9,
-    title: "Mad Movies",
-    desc: "Marvel movie database and community platform",
-    fullDescription: "Built as a learning project to understand full-stack architecture, this Marvel movie database demonstrates how to structure a data-driven application with user-generated content. Taught me the fundamentals of database design, API creation, and state management.",
-    link: "https://madmovies.mjscott.ca/#/home/",
-    image: "/images/movies.png",
-    category: "Experimental",
-    tech: ["PHP", "HTML", "CSS", "SQL", "MySQL"],
-    problem: "Needed to understand full-stack development principles and database relationships beyond frontend work, specifically how to handle user-generated content at scale.",
-    audience: "Myself as a learning exercise, but designed for Marvel fans who want to track movies and share reviews.",
-    reasoning: "Chose PHP and MySQL to learn server-side fundamentals without framework abstractions. Built custom SQL queries to deeply understand database optimization and N+1 query problems. Implemented user reviews to practice data validation and moderation patterns common in production apps.",
-    nextSteps: [
-      "Migrate to modern stack (Next.js + Postgres) to compare architectural patterns",
-      "Add user authentication to practice secure session management",
-      "Implement rate limiting on review submissions to learn about abuse prevention"
-    ],
-    role: "Full Stack Developer"
-  },
-  10: {
-    id: 10,
-    title: "Neon Maze",
-    desc: "Interactive browser game with enemy AI",
-    fullDescription: "Wanted to understand game physics and collision detection without relying on game engines. Neon Maze taught me how to implement game loops, manage state across frames, and optimize canvas rendering—skills that translate directly to building smooth UI animations in production apps.",
-    link: "https://neonmaze.mjscott.ca/",
-    image: "/images/neon.png",
-    category: "Experimental",
-    tech: ["JavaScript", "HTML5 Canvas", "CSS", "Game Physics"],
-    problem: "Needed hands-on experience with animation loops, collision detection, and performance optimization for complex interactive UIs.",
-    audience: "Learning project for myself, but accessible to anyone who enjoys casual browser games with keyboard controls.",
-    reasoning: "Built with vanilla JavaScript and Canvas API to deeply understand rendering pipelines without framework magic. Implemented custom collision detection to learn spatial algorithms. Used requestAnimationFrame to practice performance optimization patterns that apply to any high-frequency UI updates.",
-    nextSteps: [
-      "Add difficulty progression system to learn about game balance and player retention",
-      "Implement leaderboard with local storage to practice client-side data persistence",
-      "Add procedural maze generation to understand algorithm complexity"
-    ],
-    role: "Game Developer"
-  },
-  11: {
-    id: 11,
-    title: "Panda Express",
-    desc: "Interactive character with emotion states",
-    fullDescription: "Built to master GSAP animation library before using it in client projects. Creating this interactive panda with emotional states taught me timeline coordination, easing functions, and how to make UI feel alive—skills I now use for microinteractions that improve product engagement.",
-    link: "https://pandagame.mjscott.ca/",
-    image: "/images/panda.png",
-    category: "Experimental",
-    tech: ["JavaScript", "GSAP", "HTML5", "CSS", "Animation"],
-    problem: "Needed to understand advanced animation techniques and state management for interactive UI elements before implementing them in production environments.",
-    audience: "Personal learning project, but designed to be engaging for anyone who appreciates character animation and interaction design.",
-    reasoning: "Chose GSAP specifically because it's industry-standard for complex animations where CSS falls short. Built multiple emotional states to practice animation sequencing and state transitions. Used control panel interface to learn about coordinating UI controls with animation timelines—directly applicable to dashboard and admin interfaces.",
-    nextSteps: [
-      "Add sound effects triggered by animations to learn audio API integration",
-      "Implement personality system that remembers user interactions to explore state persistence",
-      "Create animation editor mode to understand tooling for content creators"
-    ],
-    role: "Animation Developer"
   }
 };
 
