@@ -19,8 +19,19 @@ type Project = {
 const allProjects: Project[] = [
   {
     id: 1,
+    title: "Serene Pilates",
+    desc: "Next.js, Tailwind CSS, React, Vercel",
+    extra: "Transformed Figma design into a fully responsive website. Clean, minimal design focused on user experience and conversion.",
+    link: "https://serene-pilates.vercel.app/",
+    image: "/images/serene.png",
+    thumbnail: "/images/serene.png",
+    category: "Web",
+    preview: "A modern pilates studio website bringing Figma designs to life with modern web technologies and optimized performance."
+  },
+  {
+    id: 2,
     title: "TDChurch",
-    desc: "A modern church website",
+    desc: "Next.js, Tailwind CSS, React, Vercel, Sanity CMS",
     extra: "Optimized for SEO using Server Components and static generation. Empowered non-technical staff with headless CMS.",
     link: "https://tdchurch.ca/",
     image: "/images/tdcimg.png",
@@ -29,9 +40,9 @@ const allProjects: Project[] = [
     preview: "Centralized platform reducing communication gaps and enabling autonomous content management for church staff."
   },
   {
-    id: 2,
+    id: 3,
     title: "Build With Dream",
-    desc: " A contractors showcase and contact website.",
+    desc: "Next.js, Tailwind CSS, React, Framer Motion, Vercel",
     extra: "Optimized images with Next.js for fast loading. Static generation for instant page loads from search.",
     link: "https://buildwithdream.com/",
     image: "/images/dreamb.png",
@@ -39,9 +50,9 @@ const allProjects: Project[] = [
     preview: "Transformed online presence to convert visitors into qualified leads through visual storytelling and streamlined contact flow."
   },
   {
-    id: 3,
+    id: 4,
     title: "Susan Brown",
-    desc: "Workshops That Build Confidence",
+    desc: "Next.js, Tailwind CSS, Sanity",
     extra: "Headless CMS for autonomous schedule management. Social proof prioritized for conversion optimization.",
     link: "https://susanmbrown.com/",
     image: "/images/susan2.png",
@@ -50,9 +61,9 @@ const allProjects: Project[] = [
     preview: "Streamlined booking flow that increased workshop conversions while reducing administrative overhead."
   },
   {
-    id: 4,
+    id: 5,
     title: "Dena Startup Labs",
-    desc: "Startup for founders",
+    desc: "Webflow",
     extra: "Webflow for rapid content iteration. Refined UI to project operational excellence to detail-oriented founders.",
     link: "https://www.denastartuplab.com/",
     image: "/images/dena.png",
@@ -61,9 +72,9 @@ const allProjects: Project[] = [
     preview: "Rebuilt brand credibility through visual consistency, reducing bounce rates and increasing program applications."
   },
   {
-    id: 5,
+    id: 6,
     title: "Clayson Contstruction Services",
-    desc: " Contracting website I worked on.",
+    desc: "WordPress, Custom CSS, HTML",
     extra: "Mobile-optimized for 70% mobile traffic. Information architecture restructured around customer needs.",
     link: "https://claysonconstruction.com/",
     image: "/images/clayson.png",
@@ -72,9 +83,9 @@ const allProjects: Project[] = [
     preview: "Redesigned user flow to reduce bounce rates and improve lead quality through clearer service navigation."
   },
    {
-    id: 6,
+    id: 7,
     title: "Zero to Two",
-    desc: " A GTM operating system for founders.",
+    desc: "Webflow",
     extra: "Complete brand rebuild with new logo. Performance optimization to signal operational excellence.",
     link: "https://gozerototwo.com/",
     image: "/images/zero.png",
@@ -83,9 +94,20 @@ const allProjects: Project[] = [
     preview: "Transformed brand positioning to align with premium GTM framework targeting experienced founders."
   },
   {
-    id: 7,
+    id: 8,
+    title: "Galore YYZ",
+    desc: "Shopify, Liquid, CSS, JavaScript",
+    extra: "Custom Liquid code for navigation product slider. Enhanced product display with custom image galleries.",
+    link: "https://galoreyyz.com/",
+    image: "/images/galore.png",
+    thumbnail: "/images/galore.png",
+    category: "Web",
+    preview: "Developed custom Shopify features using Liquid to enhance product navigation and visual merchandising."
+  },
+  {
+    id: 9,
     title: "Padies Cakes",
-    desc: "Online storefront for a baker.",
+    desc: "WordPress, WooCommerce, Custom CSS",
     extra: "WooCommerce for proven payment processing. Visual-first galleries for emotional purchasing decisions.",
     link: "https://padiescakes.ca/",
     image: "/images/padiescakes.png",
@@ -93,9 +115,9 @@ const allProjects: Project[] = [
     preview: "Enabled 24/7 ordering and freed baker from manual coordination to focus on product quality."
   },
   {
-    id: 8,
+    id: 10,
     title: "Autodriva",
-    desc: "All-in-one automotive service site.",
+    desc: "WordPress, JavaScript, CSS, Booking System, Elementor",
     extra: "Real-time booking integration with provider calendars. Mobile-first for on-the-road service searches.",
     link: "https://autodriva.com/",
     image: "/images/autothumb.png",
