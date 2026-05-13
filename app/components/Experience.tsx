@@ -16,14 +16,15 @@ const experiences = [
     ]
   },
   {
-    role: "Freelance Web Developer",
-    company: "Self-Employed",
-    period: "Jan. 2024 - Present",
+    role: "Founder & Developer",
+    company: "AcerSites",
+    period: "May 2025 - Present",
     location: "Remote",
     responsibilities: [
-      "Manage multiple client websites, delivering responsive, interactive, and visually engaging web solutions",
-      "Communicate with clients to gather requirements, provide updates, and ensure satisfaction with final deliverables",
-      "Demonstrate effective time management, problem-solving, and organizational skills while juggling multiple projects"
+      "Built scalable, responsive web apps using Next.js, TypeScript, React, and Tailwind CSS — achieving 40%+ improvements in page load times via lazy loading, code splitting, and image optimization",
+      "Integrated RESTful APIs and LLM APIs connecting headless CMS platforms, AI services, and third-party tools with efficient state management across multiple production environments",
+      "Maintained GitHub repositories with CI/CD pipelines via GitHub Actions and Vercel, ensuring automated builds and controlled production releases",
+      "Engaged clients to gather requirements, align on scope, and deliver production-ready interfaces within defined timelines"
     ]
   }
 ];
@@ -93,7 +94,7 @@ export default function Experience() {
         className="text-center mb-16"
       >
         <a
-          href="/images/Joshua_Scott_Resume.pdf"
+          href="/images/resume.pdf"
           download
           className="inline-flex items-center gap-2 px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-teal-500/50"
         >

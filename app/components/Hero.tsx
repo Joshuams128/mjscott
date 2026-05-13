@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
-  const titles = ["Frontend Developer", "UX/UI Designer", "Problem Solver"];
+  const titles = ["Full-Stack Developer", "API & Database Architect", "Problem Solver"];
   const [currentTitle, setCurrentTitle] = useState("");
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
@@ -68,7 +68,7 @@ export default function Hero() {
         transition={{ delay: 0.3, duration: 0.6 }}
         className="mt-4 text-base sm:text-lg text-white/70 max-w-2xl"
       >
-        I build modern, high-performance websites for clients using React, Next.js, Sanity CMS, WordPress, and Webflow. I focus on creating sites that are fast, easy for clients to manage, and designed to convert visitors into customers.
+        I build full-stack web applications end-to-end — from REST APIs and MongoDB/Mongoose schemas to authenticated dashboards, third-party integrations (Stripe, Twilio, Resend, Square), and production deployments on Vercel. I work in Next.js and TypeScript, with experience across headless CMSes (Sanity, Contentful) and authentication (NextAuth, Clerk).
       </motion.p>
 
 
@@ -81,7 +81,7 @@ export default function Hero() {
       >
         {/* Resume Button */}
         <a
-          href= "/images/Joshua_Scott_Resume.pdf" // <- put your actual resume file in /public
+          href="/images/resume.pdf"
           download
           className="px-6 py-3 bg-teal-400/20 border border-teal-300/40 rounded-xl text-teal-300 hover:bg-teal-400/30 transition-all backdrop-blur-md text-sm sm:text-base"
         >

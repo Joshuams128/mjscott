@@ -1,22 +1,25 @@
 "use client";
 import { motion } from "framer-motion";
-import { Figma, Code, Database, Box, Palette, Globe, Server, DatabaseBackup } from "lucide-react";
-import { FaWordpress, FaShopify } from "react-icons/fa";
-import { SiSquarespace } from "react-icons/si";
+import { Code, Database, Box, Palette, Globe, Server, Cloud, Lock, Mail, Cpu } from "lucide-react";
+import { FaWordpress } from "react-icons/fa";
 
 const skills = [
-  { name: "WordPress", icon: FaWordpress },
-  { name: "Shopify", icon: FaShopify },
-  { name: "Squarespace", icon: SiSquarespace },
-  { name: "React", icon: Code },
   { name: "Next.js", icon: Globe },
-  { name: "TailwindCSS", icon: Palette },
-  { name: "Figma", icon: Figma },
-  { name: "UX/UI", icon: Box },
+  { name: "React", icon: Code },
+  { name: "TypeScript", icon: Code },
   { name: "Node.js", icon: Server },
-  { name: "SQL", icon: Database },
-  { name: "PHP", icon: DatabaseBackup },
-  { name: "Three.js", icon: Code },
+  { name: "MongoDB / Mongoose", icon: Database },
+  { name: "NextAuth", icon: Lock },
+  { name: "Clerk", icon: Lock },
+  { name: "Sanity CMS", icon: Box },
+  { name: "Contentful", icon: Box },
+  { name: "Stripe", icon: Cpu },
+  { name: "Square", icon: Cpu },
+  { name: "Twilio", icon: Cpu },
+  { name: "Resend", icon: Mail },
+  { name: "Vercel / CI-CD", icon: Cloud },
+  { name: "TailwindCSS", icon: Palette },
+  { name: "WordPress", icon: FaWordpress },
 ];
 
 export default function SkillsMarquee() {
